@@ -1,0 +1,515 @@
+<?xml version='1.0' encoding='us-ascii'?>
+
+<!--  Punch/Kick Sequences for pi-fighter.py -->
+<!-- Time are multiples of a standard wait time - defined in the .cfg file - use 2 for standard delay, 1 for short delays-->
+
+<AllSequence>
+<Sequence 
+	title="Alternate punch + kick"
+    >
+	<!--Right-->
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+    <Attack><Kick>Right</Kick> <Wait>2</Wait></Attack>
+    <Attack><Kick>Left</Kick> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+    <Attack><Kick>Right</Kick> <Wait>2</Wait></Attack>
+    <Attack><Kick>Left</Kick> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+
+
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+    <Attack><Kick>Right</Kick> <Wait>2</Wait></Attack>
+    <Attack><Kick>Left</Kick> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+
+
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+    <Attack><Kick>Right</Kick> <Wait>2</Wait></Attack>
+    <Attack><Kick>Left</Kick> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+
+
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+    <Attack><Kick>Right</Kick> <Wait>2</Wait></Attack>
+    <Attack><Kick>Left</Kick> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+
+
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+    <Attack><Kick>Right</Kick> <Wait>2</Wait></Attack>
+    <Attack><Kick>Left</Kick> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+
+
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+    <Attack><Kick>Right</Kick> <Wait>2</Wait></Attack>
+    <Attack><Kick>Left</Kick> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+
+
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+    <Attack><Kick>Right</Kick> <Wait>2</Wait></Attack>
+    <Attack><Kick>Left</Kick> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+
+
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+    <Attack><Kick>Right</Kick> <Wait>2</Wait></Attack>
+    <Attack><Kick>Left</Kick> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+
+
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+    <Attack><Kick>Right</Kick> <Wait>2</Wait></Attack>
+    <Attack><Kick>Left</Kick> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+	<Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Kick>Left</Kick> <Wait>2</Wait></Attack>
+    <Attack><Kick>Right</Kick> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+	<Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Kick>Left</Kick> <Wait>2</Wait></Attack>
+    <Attack><Kick>Right</Kick> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+	<Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Kick>Left</Kick> <Wait>2</Wait></Attack>
+    <Attack><Kick>Right</Kick> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+	<Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Kick>Left</Kick> <Wait>2</Wait></Attack>
+    <Attack><Kick>Right</Kick> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+	<Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Kick>Left</Kick> <Wait>2</Wait></Attack>
+    <Attack><Kick>Right</Kick> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+	<Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Kick>Left</Kick> <Wait>2</Wait></Attack>
+    <Attack><Kick>Right</Kick> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+	<Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Kick>Left</Kick> <Wait>2</Wait></Attack>
+    <Attack><Kick>Right</Kick> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+	<Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Kick>Left</Kick> <Wait>2</Wait></Attack>
+    <Attack><Kick>Right</Kick> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+	<Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Kick>Left</Kick> <Wait>2</Wait></Attack>
+    <Attack><Kick>Right</Kick> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+	<Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Kick>Left</Kick> <Wait>2</Wait></Attack>
+    <Attack><Kick>Right</Kick> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+
+	
+</Sequence>
+
+<Sequence 
+	title="3 punch + back leg kick combo 2"
+    >
+	<!--Right-->
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+    <Attack><Kick>Left</Kick> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+    <Attack><Kick>Left</Kick> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+	
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+    <Attack><Kick>Left</Kick> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+	
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+    <Attack><Kick>Left</Kick> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+	
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+    <Attack><Kick>Left</Kick> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+	
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+    <Attack><Kick>Left</Kick> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+	
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+    <Attack><Kick>Left</Kick> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+	
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+    <Attack><Kick>Left</Kick> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+	
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+    <Attack><Kick>Left</Kick> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+	
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+    <Attack><Kick>Left</Kick> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+	
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Kick>Right</Kick> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+	
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Kick>Right</Kick> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+	
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Kick>Right</Kick> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+	
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Kick>Right</Kick> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+	
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Kick>Right</Kick> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+	
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Kick>Right</Kick> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+	
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Kick>Right</Kick> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+	
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Kick>Right</Kick> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+	
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Kick>Right</Kick> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+	
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Kick>Right</Kick> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+	
+</Sequence>
+
+
+<Sequence 
+	title="3 punch combo"
+    >
+	<!--Right-->
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+
+	<!--Left Hand-->
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+	<Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+	<Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+	<Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+	<Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+	<Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+
+		<!--Right-->
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+
+	<!--Left Hand-->
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+	<Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+	<Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+	<Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+	<Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+	<Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+
+</Sequence>
+
+
+
+
+<Sequence title="Alternate punching">
+	<!--Right/Left-->
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+
+
+	<!-- Half Time -->
+	<Attack><Punch>Right</Punch> <Wait>1</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>1</Wait></Attack>
+	<Rest>10</Rest>
+	<Attack><Punch>Right</Punch> <Wait>1</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>1</Wait></Attack>
+	<Rest>10</Rest>
+	<Attack><Punch>Right</Punch> <Wait>1</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>1</Wait></Attack>
+	<Rest>10</Rest>
+	<Attack><Punch>Right</Punch> <Wait>1</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>1</Wait></Attack>
+	<Rest>10</Rest>
+	<Attack><Punch>Right</Punch> <Wait>1</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>1</Wait></Attack>
+	<Rest>10</Rest>
+	<Attack><Punch>Right</Punch> <Wait>1</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>1</Wait></Attack>
+	<Rest>10</Rest>
+	<Attack><Punch>Right</Punch> <Wait>1</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>1</Wait></Attack>
+	<Rest>10</Rest>
+	<Attack><Punch>Right</Punch> <Wait>1</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>1</Wait></Attack>
+	<Rest>10</Rest>
+	<Attack><Punch>Right</Punch> <Wait>1</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>1</Wait></Attack>
+	<Rest>10</Rest>
+	<Attack><Punch>Right</Punch> <Wait>1</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>1</Wait></Attack>
+	<Rest>10</Rest>
+
+
+</Sequence>
+
+
+<Sequence title="Alternate punching 2">
+	<!--Right/Left-->
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+    <Attack><Punch>Right</Punch> <Wait>2</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>2</Wait></Attack>
+	<Rest>10</Rest>
+
+
+	<!-- Half Time -->
+	<Attack><Punch>Right</Punch> <Wait>1</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>1</Wait></Attack>
+	<Rest>10</Rest>
+	<Attack><Punch>Right</Punch> <Wait>1</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>1</Wait></Attack>
+	<Rest>10</Rest>
+	<Attack><Punch>Right</Punch> <Wait>1</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>1</Wait></Attack>
+	<Rest>10</Rest>
+	<Attack><Punch>Right</Punch> <Wait>1</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>1</Wait></Attack>
+	<Rest>10</Rest>
+	<Attack><Punch>Right</Punch> <Wait>1</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>1</Wait></Attack>
+	<Rest>10</Rest>
+	<Attack><Punch>Right</Punch> <Wait>1</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>1</Wait></Attack>
+	<Rest>10</Rest>
+	<Attack><Punch>Right</Punch> <Wait>1</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>1</Wait></Attack>
+	<Rest>10</Rest>
+	<Attack><Punch>Right</Punch> <Wait>1</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>1</Wait></Attack>
+	<Rest>10</Rest>
+	<Attack><Punch>Right</Punch> <Wait>1</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>1</Wait></Attack>
+	<Rest>10</Rest>
+	<Attack><Punch>Right</Punch> <Wait>1</Wait></Attack>
+    <Attack><Punch>Left</Punch> <Wait>1</Wait></Attack>
+	<Rest>10</Rest>
+
+
+</Sequence>
+
+
+</AllSequence>
