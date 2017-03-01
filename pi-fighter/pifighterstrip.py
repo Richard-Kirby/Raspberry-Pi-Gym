@@ -14,10 +14,10 @@ NO_STATE_COLOUR = neopixel.Color(0,0,0)
 FINISHED_COLOUR = neopixel.Color(255,255, 255)
 
 # KickButt Mode Colours
-VERY_HEALTHY_COLOUR = neopixel.Color(255,0,0)
-DAMAGED_COLOUR = neopixel.Color(255,255,0)
-DANGER_COLOUR = neopixel.Color(0,255,0)
-KO_COLOUR = neopixel.Color(0,0,255)
+VERY_HEALTHY_COLOUR = neopixel.Color(100,0,0)
+DAMAGED_COLOUR = neopixel.Color(100,100,0)
+DANGER_COLOUR = neopixel.Color(0,100,0)
+KO_COLOUR = neopixel.Color(0,0,100)
 
 # WS2812 - LED strip configuration:
 LED_COUNT      = 16      # Number of LED pixels. 0-7 on right 8-15 on left.
@@ -189,6 +189,9 @@ def IndicateHealthPoints(HealthPoints, Strip):
 	global strip 
 	
 	HealthPixels = round(HealthPoints/25)
+	
+	if (HealthPoints >0 and HealthPixels == 0):
+		HealthPixels = 1
 	
 	print (HealthPoints)
 	if (HealthPoints > 85):

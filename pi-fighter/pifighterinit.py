@@ -10,12 +10,16 @@ WorkoutMode =2
 
 UserName =""
 
-# Creat a queue for talking between the threads
-CommQueue = queue.Queue()
+# Create 2 queues for talking between the threads - one for TCP and one for UDP
+UDPCommSendQueue = queue.Queue()
+UDPCommRecQueue = queue.Queue()
+TCPCommSendQueue = queue.Queue()
+TCPCommRecQueue = queue.Queue()
 
 
 def InitialiseSystem():
 	global Mode 
+	global UserName
 	
 	#Set up the mode, getting challengers name 
 	UserName = input("Challenger's name:")
@@ -44,7 +48,9 @@ def SetUpLoggingAndConfig():
 	global CMD_FLASH_TIME
 	global BETWEEN_SEQ_REST
 	global SERVER_HOST
-	global SERVER_PORT
+	global TCP_PORT
+	global UDP_PORT
+	global config
 	
 	# Setting up logging - add in time to it. Create a filename using time functions
 	Now = datetime.datetime.now()
@@ -71,10 +77,10 @@ def SetUpLoggingAndConfig():
 	BETWEEN_SEQ_REST = config.getint('TIMING', 'BETWEEN_SEQ_REST')
 
 	# Get Server Information 
-	#SERVER_HOST = config.getstr('SERVER', 'SERVER_HOST')
-	#SERVER_PORT = config.getint('SERVER', 'SERVER_PORT')
+
 	SERVER_HOST= config['SERVER']['SERVER_HOST']
-	SERVER_PORT= int (config['SERVER']['SERVER_PORT'])
+	UDP_PORT= int (config['SERVER']['UDP_PORT'])
+	TCP_PORT= int (config['SERVER']['TCP_PORT'])
 				
 
 # Getting everything ready

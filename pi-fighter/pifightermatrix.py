@@ -13,18 +13,29 @@ def Setup():
 	# Let the user know about to start
 	device.orientation(180) # SPI is mounted upside down for cabling reasons.
 
-def Intro():
+
+# Writing the Intro String to the Matrix - gives time to get ready. 
+def Intro(IntroStr= "Pi-Fighter"):
 
 	device.brightness(15)
-	device.show_message("Pi-Fighter", font=proportional(CP437_FONT), delay = 0.05)
+
+	device.show_message(IntroStr, font=proportional(CP437_FONT), delay = 0.04)
 
 	# Countdown 	
-	for i in range(4,-1,-1):
+	for i in range(5,-1,-1):
 		Str = ("{}".format(i))
-		device.show_message(Str, font=proportional(CP437_FONT), delay = 0.05)
+		device.show_message(Str, font=proportional(CP437_FONT), delay = 0.04)
 		time.sleep(.4)
 
+# Write a string to the Matrix. 
+def DisplayStr(WriteStr):
 
+	device.brightness(15)
+
+	device.show_message(WriteStr, font=proportional(CP437_FONT), delay = 0.04)
+
+		
+		
 
 def DrawPattern(PatternId, Brightness):
 
