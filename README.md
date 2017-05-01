@@ -15,3 +15,6 @@ The gym provides several components, including:
 All applications are configurable to allow tuning and they all create their own logs which can be used for other programs or analysis.  
 
 Really this is a _still_ an early cut of the Pi Gym suite - a lot of work is still required, but it does contain some basic functionality as described above.  
+
+NOTE: uses https://pypi.python.org/pypi/rpi_ws281x/2.0.3 - note that you have to turn off the Pi Audio board for the neopixel strips
+to work properly. As per https://github.com/jgarff/rpi_ws281x/wiki - You must disable the on-board audio by blacklisting the Broadcom audio kernel module.
