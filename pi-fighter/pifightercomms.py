@@ -117,6 +117,7 @@ class TCPCommsThread (threading.Thread):
 			# Connect to server and send data
 			TCPsocket.connect((SERVER_HOST, TCP_PORT))
 		
+			print ("TCP Comms")
 			while (1):
 				
 				if (TCPCommSendQueue.empty() == False):

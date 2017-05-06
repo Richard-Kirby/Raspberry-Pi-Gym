@@ -22,9 +22,9 @@ def InitialiseSystem():
 	global UserName
 	
 	#Set up the mode, getting challengers name 
-	UserName = input("Challenger's name:")
-	UserHealthPoints = 200
-	print(UserName + " is not exactly fierce sounding - Can I call you THE Dragon?")
+	#UserName = input("Challenger's name:")
+	#UserHealthPoints = 200
+	#print(UserName + " is not exactly fierce sounding - Can I call you THE Dragon?")
 
 	# Set up the LED Matrix
 	Matrix.Setup()

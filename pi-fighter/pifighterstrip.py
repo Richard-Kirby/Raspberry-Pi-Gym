@@ -14,9 +14,9 @@ NO_STATE_COLOUR = neopixel.Color(0,0,0)
 FINISHED_COLOUR = neopixel.Color(255,255, 255)
 
 # KickButt Mode Colours
-VERY_HEALTHY_COLOUR = neopixel.Color(100,0,0)
+VERY_HEALTHY_COLOUR = neopixel.Color(0,100,0) # RGB
 DAMAGED_COLOUR = neopixel.Color(100,100,0)
-DANGER_COLOUR = neopixel.Color(0,100,0)
+DANGER_COLOUR = neopixel.Color(100,0,0)
 KO_COLOUR = neopixel.Color(0,0,100)
 
 # WS2812 - LED strip configuration:

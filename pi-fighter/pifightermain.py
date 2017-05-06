@@ -32,7 +32,7 @@ def OpponentSetup():
 	# Get list of Opponents
 	
 	TCPCommSendQueue.put_nowait("<OpponentList></OpponentList>")
-	#print ("Put something into TCP Queue")
+	print ("Put something into TCP Queue")
 	
 	#	Blocking waiting for a list of oppoonents. 
 	ServerData = TCPCommRecQueue.get()
