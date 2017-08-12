@@ -498,9 +498,19 @@ RumbleThreadHdl.start()
 	
 #print("Sent:     {}".format(data))
 #print("Received: {}".format(received))
-for i in range(25,100,20):
-	RumbleCmd = str("<Rumble><Vib0Str>{}</Vib0Str><Vib1Str>0</Vib1Str><Vib2Str>{}</Vib2Str><MsDuration>80</MsDuration></Rumble>".format(i, i))
-	RumbleQ.put_nowait(RumbleCmd)
+
+# Short test to confirm each of the vibrators is working.
+for i in range(0,3):
+	print ("Vibrator ", i)
+
+	VibrStrength= [0,0,0]
+	for j in range(20,100,20):
+		VibrStrength[i]=j
+		RumbleCmd = str("<Rumble><Vib0Str>{}</Vib0Str><Vib1Str>{}</Vib1Str><Vib2Str>{}</Vib2Str><MsDuration>200</MsDuration></Rumble>".format(VibrStrength[0],VibrStrength[1],VibrStrength[2]))
+		RumbleQ.put_nowait(RumbleCmd)
+		time.sleep(0.5)
+	time.sleep(1)
+
 
 while(1):
 	try:
