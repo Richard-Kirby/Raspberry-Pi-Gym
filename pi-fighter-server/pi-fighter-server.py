@@ -14,40 +14,64 @@ NumAttacks = 0
 OpponentDefeated = False
 FinalAttackNum = 0
 
-# Event to indicate the fight is over.  
+# Event to indicate the fight is over.  This synchronises across threads.  
 FightOver = threading.Event()
 FightOver.clear()
 
 AllPlayers =[]
 
-def ReadUserInfo():
+class PlayerManager:
+	UserFile = "pi-fighter-users.xml"
 	global AllPlayers
+	UserET_Root = '' 
+	UserFileInfo = ''
 	
-	PlayerLog = open("pi-fighter-users.xml", "r+")	
-	PlayerInfo = PlayerLog.readline()
-	print(PlayerInfo)
-	
-	# Parse the User information into separate players
-	UserFileInfo = ElementTree.fromstring(PlayerInfo)
-	
-	
-	for User in UserFileInfo:
-		for UserData in User:
-			#print (UserData.tag, UserData.text)
-			
-			if (UserData.tag == 'Name'):
-				Name = UserData.text
-			
-			elif (UserData.tag == 'Health'):
-				Health = UserData.text
-			
-		
-			
-		AllPlayers.append(Player(Name, Health))
-	
-	print (len(AllPlayers))
-	print (AllPlayers[0].name)
+	def __init__(self):
+		logging.info("Processing all players from file" + self.UserFile)
 
+	# Read all the player information from the player file.  	
+	def ReadPlayerInfo(self):
+		
+		self.UserFileInfo = ElementTree.parse(self.UserFile)
+		
+		#print(UserFileInfo)
+		
+		# Grabs the root of the XML tree for processing. 
+		self.UserET_Root = self.UserFileInfo.getroot()
+		
+		# Parse the User information into separate players - this works through the 
+		# The XML Element Tree
+		for User in self.UserET_Root:
+			#print(User.tag, User.attrib)
+			
+			Name = User.attrib.get('Name')
+			
+			for UserData in User:
+				# Find the Health Tag via the find function
+				Health = User.find('Health').text
+									
+			# Build a list of players
+			AllPlayers.append(Player(Name, Health))
+					
+		logging.info("Found {} Players".format(len(AllPlayers)))
+		
+	# Updates the player's information in the XML tree. 
+	def UpdatePlayerXML(self, Player):
+		#Go through the players looking for the player in question.
+		for User in self.UserET_Root:
+			#print(User.tag, User.attrib)
+			# If ind the right player then update his/her health.
+			if (User.attrib.get('Name') == Player.name):
+				
+				User.find('Health').text = str(Player.Health)
+				#print ("$${}$$".format(User.find('Health').text))
+	
+	# Update the XML file for persistent storage.  
+	def UpdatePlayerFile(self):
+		self.UserFileInfo.write(self.UserFile)
+		
+		
+		
 class fighter:
 	Health = 1.0
 	CurrentHealth = 1.0
@@ -55,23 +79,22 @@ class fighter:
 	
 	def __init__(self, name, health):
 		self.name = name
-		print (name)
+		#print (name)
 		self.Health = float(health)
 		self.InitialHealth = float(health)
 		self.CurrentHealth = float (health)
-		print ("Health is ", self.CurrentHealth)
+		#print ("Health is ", self.CurrentHealth)
 		
 	# Decrements health - usually due to an attack. 
 	def DecrementHealth(self, Attack):
 		self.CurrentHealth -= Attack
-		print("Fighter Health now {}".format(self.CurrentHealth))
+		#print("Fighter Health now {}".format(self.CurrentHealth))
 		return(self.CurrentHealth)
 	
 	# Resets Health - set the health back to the maximum
 	def ResetHealth(self):
 		self.CurrentHealth = self.InitialHealth
 
-#Opponents = {"One ewok": 50,"": 60, "Early Luke SkyWalker":80, 	"R2D2": 100, "Jedi Luke": 200, "Yoda": 200, "Many Ewoks": 200, "JarJar Binks":70}
 
 
 # Class to handle the Virtual Fighters.  
@@ -81,8 +104,9 @@ class VirtualFighter(fighter):
 	def __init__(self, name, health, AttackFileName):
 		super(VirtualFighter, self).__init__(name, health)
 		self.AttackFile = AttackFileName
-		print (self.name, self.Health, self.AttackFile)
-		
+		#print (self.name, self.Health, self.AttackFile)
+
+# Build a list of Virtual Fighters - should be put into a file.  
 VirtualFighters = [
 VirtualFighter("One Ewok",50, 'One_Ewok_Attack_LevelOne.xml'),
 VirtualFighter("C3-PO", 60, "C3-PO_Attack_LevelOne.xml"),
@@ -197,6 +221,7 @@ class PiFighterUDPHandler(socketserver.BaseRequestHandler):
 		global Player
 		global PiAddress
 		global OpponentStartHealth
+		global PlayerMgr
 		
 		self.timeout = 0 
 		
@@ -252,7 +277,11 @@ class PiFighterUDPHandler(socketserver.BaseRequestHandler):
 									
 									# Reward player with 2% of the opponents health points
 									Player.RewardHealthPoint(0.02*Opponent.InitialHealth)
-									
+								
+									# Keep Player Information up to date in XML as well. 
+									PlayerMgr.UpdatePlayerXML(Player)
+									PlayerMgr.UpdatePlayerFile()
+	
 
 									
 								if (OpponentDefeated == True):
@@ -359,16 +388,16 @@ class OpponentAttackThread (threading.Thread):
 	def run(self):
 		
 		print ("Starting " + self.name)
-		print("**{}" .format(self.Opponent.AttackFile))
+		#print("**{}" .format(self.Opponent.AttackFile))
 
 		
 		try:
-			print ("Open File")
+			#print ("Open File")
 			# Open the correct file for reading
 			
-			FileName = 'AttackFiles\\'+ self.Opponent.AttackFile
+			FileName = 'AttackFiles/'+ self.Opponent.AttackFile
 				
-			print("&& ", FileName)
+			#print("&& ", FileName)
 			AttackFile = open(FileName)
 			
 			# Read all the lines, which define the attacks, including timing.  
@@ -427,11 +456,11 @@ class OpponentAttackThread (threading.Thread):
 							#Attacks.Append(Damage)
 							
 				AttackArray.append([AttackSleep, Damage])
-				print (AttackArray)
+				#print (AttackArray)
 				
 			
 			TotalDelays = 0 
-			print(len(AttackArray))
+			#print(len(AttackArray))
 
 			# Loop through all the attacks if fight is not over.  Otherwise might run out of attacks while the fight
 			# is still ongoing.  
@@ -447,25 +476,34 @@ class OpponentAttackThread (threading.Thread):
 					# Total Delays is used to calculate average at the end.  
 					TotalDelays += AttackArray[i][0]
 					time.sleep(AttackArray[i][0])
-					print(AttackArray[i][1])
+					#print(AttackArray[i][1])
 					#OpponentAttackQueue.put_nowait(AttackArray[i][1])
 					#Health = Player.DecrementHealth(AttackArray[i][1])
 					
 					# Create the string to send to the main UDP process that manages the fighting.  
 					OpponentAttackStr = "<OpponentAttack>{}</OpponentAttack>".format(AttackArray[i][1])
 					
-					# Send teh message via UDP 
+					# Send the message via UDP to Pi Fighter
 					with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as UDPSocket:
 						UDPSocket.setblocking(False)
 
 						UDPSocket.sendto(bytes(OpponentAttackStr, "utf-8"),(config['SERVER']['SERVER_HOST'], int(config['SERVER']['UDP_PORT'])))
+					
+					# Send the message via UDP to Pi Fighter
+					with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as UDPSocket:
+						UDPSocket.setblocking(False)
+
+						UDPSocket.sendto(bytes(OpponentAttackStr, "utf-8"),(config['PI_TRAINER']['PI_TRAINER'], int(config['PI_TRAINER']['PI_TRAINER_PORT'])))
+
+						
+					
 					
 					#print("Player's health is {}" .format(Health))
 				
 				# Calculate the average
 				AvgDelay = TotalDelays / len(AttackArray)
 
-				print (AvgDelay)
+				#print (AvgDelay)
 				time.sleep (AvgDelay)
 			
 
@@ -523,13 +561,13 @@ class MyTCPHandler(socketserver.BaseRequestHandler):
 							OpponentStr += "<Opponent>{}</Opponent>" .format(Name)
 						
 						OpponentStr += "</OpponentList>"
-						print (OpponentStr)
+						#print (OpponentStr)
 						self.request.sendall(bytes(OpponentStr,"utf-8" ))
 						
 					# If Client has selected an Opponent, then set the opponent to the one selected.   
 					elif (ClientElement.tag == 'SelectedOpponent'):
 						OpponentName = ClientElement.text
-						print (OpponentName)
+						#print (OpponentName)
 						
 						# Find the Selected Opponent.  
 						
@@ -537,7 +575,7 @@ class MyTCPHandler(socketserver.BaseRequestHandler):
 							if VirtualFighters[i].name == OpponentName:
 								Opponent = VirtualFighters[i] 
 	
-								print ("Found Opponent ", OpponentName)
+								print ("Found Opponent",OpponentName)
 								
 								# Clear the fight over flag - this may not be the first fight
 								FightOver.clear()
@@ -554,8 +592,6 @@ class MyTCPHandler(socketserver.BaseRequestHandler):
 						OpponentReadyStr = "<OpponentReady>{}</OpponentReady>". format (Opponent.name)
 						
 						self.request.sendall(bytes(OpponentReadyStr,"utf-8" ))
-						
-				
 						
 
 					else:
@@ -605,13 +641,23 @@ class TCPCommsThread (threading.Thread):
 			
 	
 # Read in all the user information
-ReadUserInfo()
+PlayerMgr = PlayerManager()
+PlayerMgr.ReadPlayerInfo()
 
-print (AllPlayers)
 
 # Set Player to first player - will set it later. 
-Player = AllPlayers[0]
-print (Player.name)
+
+
+#Player = AllPlayers[0]
+print("Welcome to Pi Fighter Server - this server starts up and waits for players to connect")
+print("Select Player")
+
+for i in range(len(AllPlayers)):
+	print("{}. {}".format(i, AllPlayers[i].name))
+
+PlayerNum = input("Enter Player Num:")
+Player = AllPlayers[int(PlayerNum)]
+
 
 print("{} is the challenger with {} Health.".format(Player.name, Player.CurrentHealth))
 
