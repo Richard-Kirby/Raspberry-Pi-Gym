@@ -1,7 +1,7 @@
 # Standard Libraries
 import threading
-import xml.etree.ElementTree as ElementTree
 import time
+import xml.etree.ElementTree as ElementTree
 
 # Project Libraries.
 import config.config as config

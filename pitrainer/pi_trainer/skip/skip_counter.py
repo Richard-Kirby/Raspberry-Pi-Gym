@@ -1,14 +1,14 @@
 # Standard Modules
+import datetime
+import logging
+import math
 import threading
 import time
-import datetime
-import math
-import logging
 
 # Project packages.
-import Accel.Accel as Accel
-import config.config as config
 import DisplayHandler.DisplayHandler as DispHandler
+import config.config as config
+
 
 # Thread to handle skipping count.
 class SkipCountThread(threading.Thread):

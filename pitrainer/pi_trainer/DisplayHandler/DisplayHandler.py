@@ -1,8 +1,8 @@
 # Standard Modules
-import threading
-import time
 import queue
 import socket
+import threading
+import time
 
 # Scrollphathd from Pimoroni
 import scrollphathd

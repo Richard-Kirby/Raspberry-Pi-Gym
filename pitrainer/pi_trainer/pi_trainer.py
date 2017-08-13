@@ -1,13 +1,12 @@
 #!/usr/bin/python3
 
 # Standard Modules
-import time
 
 # Custom packages
-import rumble.rumble as rumble  # Controls Vibrators
-import config.config as config  # Config python file to share common stuff like global variables.
+import rumble.rumble as rumble
 import UDPComms.UDPRec as UDPRec  # UDP Comms
-import DisplayHandler.DisplayHandler as DisplayHandler  # Handles the display.
+import DisplayHandler.DisplayHandler as DisplayHandler
+import config.config as config
 import skip.skip_counter as skip_counter
 import Accel.Accel as Accel
 
@@ -36,6 +35,13 @@ for i in range(0, 3):
 
 if __name__ == "__main__":
 
+    # Grab the necessary configuration information and set up the logging.
+    #config.SetUpConfigAndLog()
+
+    # Initialise the PIGPIO library, including starting up the daemon if needed.
+    config.InitPIGPIOD()
+
+    # Setting up accelerometer object.
     accel = Accel.I2C_Accelorometer()
 
     try:

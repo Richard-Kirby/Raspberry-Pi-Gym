@@ -1,6 +1,6 @@
-import threading
-import socketserver
 import socket
+import socketserver
+import threading
 import xml.etree.ElementTree as ElementTree
 
 # Project modules
